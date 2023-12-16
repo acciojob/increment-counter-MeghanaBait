@@ -7,9 +7,29 @@
 </head>
 
 <body>
+	<p id="counter">0</p>
+  <button id="incrementBtn">Increment</button>
+
+  <script>
+    // Get the counter element and button element
+    const counterElement = document.getElementById('counter');
+    const incrementBtn = document.getElementById('incrementBtn');
+
+    // Add a click event listener to the button
+    incrementBtn.addEventListener('click', function() {
+      // Get the current counter value
+      const currentValue = parseInt(counterElement.innerText);
+
+      // Display an alert with the un-incremented value
+      alert('Un-incremented value: ' + currentValue);
+
+      // Increment the counter value and update the display
+      counterElement.innerText = currentValue + 1;
+    });
+  </script>
 	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+<!--     <script type="text/javascript" src="./script.js">
+</script> -->
 
 </body>
 
